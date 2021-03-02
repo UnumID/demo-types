@@ -15,6 +15,7 @@ export type DemoSession = DemoBaseEntity;
 
 export interface DemoPresentationRequestOptions {
   credentialRequests: CredentialRequest[];
+  metadata: { sessionUuid: string };
 }
 
 export type DemoPresentationRequestDto = DemoDto<PresentationRequestPostDto, 'presentationRequest'>;
