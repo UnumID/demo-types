@@ -23,3 +23,10 @@ export type DemoPresentationRequestDto = DemoDto<PresentationRequestPostDto, 'pr
 export type DemoPresentationDto = WithVerification<DemoDto<Presentation, 'presentation'>>;
 
 export type DemoNoPresentationDto = WithVerification<DemoDto<NoPresentation, 'noPresentation'>>;
+
+export interface DemoUser extends DemoBaseEntity {
+  email: string;
+  password: string;
+  did?: string;
+  phone?: string;
+}
