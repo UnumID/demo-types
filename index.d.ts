@@ -18,7 +18,7 @@ export interface DemoPresentationRequestOptions {
   metadata: { sessionUuid: string };
 }
 
-export type DemoPresentationRequestDto = DemoDto<PresentationRequestPostDto, 'presentationRequest'>;
+export type DemoPresentationRequestDto = DemoDto<PresentationRequestPostDto, 'presentationRequestPostDto'>;
 
 export type DemoPresentationDto = WithVerification<DemoDto<Presentation, 'presentation'>>;
 
