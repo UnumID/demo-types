@@ -24,9 +24,12 @@ export type DemoPresentationDto = WithVerification<DemoDto<Presentation, 'presen
 
 export type DemoNoPresentationDto = WithVerification<DemoDto<NoPresentation, 'noPresentation'>>;
 
-export interface DemoUser extends DemoBaseEntity {
+export interface DemoUserCreateOptions {
   email: string;
   password: string;
-  did?: string;
   phone?: string;
 }
+
+type DemoUser = DemoUserCreateOptions & DemoBaseEntity & { did?: string };
+
+export type DemoUserWithoutPassword = Omit<DemoUser, 'password'>;
