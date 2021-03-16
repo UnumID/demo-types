@@ -55,9 +55,8 @@ export interface DemoUserCreateOptions {
   phone?: string;
 }
 
-// User type used by issuer server
-type DemoUser = DemoUserCreateOptions & DemoBaseEntity & { did?: string };
-
-// User type with the password field ommitted
-// returned by issuer api /user endpoint; shared between all demo applications
-export type DemoUserWithoutPassword = Omit<DemoUser, 'password'>;
+// serialization of the User type used by issuer server
+type DemoUser = Omit<DemoUserCreateOptions, 'password'> & DemoBaseEntity & {
+  did?: string;
+  devices: DemoDevice[];
+};
