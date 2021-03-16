@@ -43,6 +43,11 @@ export type DemoPresentationDto = WithVerification<DemoDto<Presentation, 'presen
 // type of the object published by verifier servers when a shared NoPresentation is received + verified
 export type DemoNoPresentationDto = WithVerification<DemoDto<NoPresentation, 'noPresentation'>>;
 
+// type of the Device object returned with DemoUsers
+export interface DemoDevice extends DemoBaseEntity {
+  fcmRegistrationToken: string;
+}
+
 // type of the object expected by the issuer server to create a User
 export interface DemoUserCreateOptions {
   email: string;
@@ -50,9 +55,8 @@ export interface DemoUserCreateOptions {
   phone?: string;
 }
 
-// User type used by issuer server
-type DemoUser = DemoUserCreateOptions & DemoBaseEntity & { did?: string };
-
-// User type with the password field ommitted
-// returned by issuer api /user endpoint; shared between all demo applications
-export type DemoUserWithoutPassword = Omit<DemoUser, 'password'>;
+// serialization of the User type used by issuer server
+type DemoUser = Omit<DemoUserCreateOptions, 'password'> & DemoBaseEntity & {
+  did?: string;
+  devices: DemoDevice[];
+};
