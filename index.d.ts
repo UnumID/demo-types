@@ -43,6 +43,11 @@ export type DemoPresentationDto = WithVerification<DemoDto<Presentation, 'presen
 // type of the object published by verifier servers when a shared NoPresentation is received + verified
 export type DemoNoPresentationDto = WithVerification<DemoDto<NoPresentation, 'noPresentation'>>;
 
+// type of the Device object returned with DemoUsers
+export interface DemoDevice extends DemoBaseEntity {
+  fcmRegistrationToken: string;
+}
+
 // type of the object expected by the issuer server to create a User
 export interface DemoUserCreateOptions {
   email: string;
