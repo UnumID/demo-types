@@ -6,6 +6,6 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@unumid/types": "git+ssh://git@github.com/UnumID/types.git#types"
+    "@unumid/types": "git+ssh://git@github.com/UnumID/types.git#v0.0.8"
   }
 }
