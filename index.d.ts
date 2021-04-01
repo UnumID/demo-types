@@ -1,5 +1,7 @@
 import {
   CredentialRequest,
+  EncryptedData,
+  IssuerInfoMap,
   NoPresentation,
   Presentation,
   PresentationRequestPostDto
@@ -60,3 +62,35 @@ type DemoUser = Omit<DemoUserCreateOptions, 'password'> & DemoBaseEntity & {
   did?: string;
   fcmRegistrationTokens: DemoFcmRegistrationToken[];
 };
+
+// /**
+//  * Type to encapsulate an encrypted presentation sent from the UnumID SaaS
+//  */
+// export interface EncryptedPresentation {
+//   presentationRequestUuid: string;
+//   encryptedPresentation: EncryptedData;
+//   // verifierDid: string // TODO add after added to mobile sdk
+// }
+
+
+// /**
+//  * Type to encapsulate the non sensitive decrypted presentation information to help enrich UnumID's SaaS reporting dashboard.
+//  */
+// export interface PresentationReceiptInfo {
+//   subjectDid: string;
+//   verifierDid: string;
+//   holderApp: string;
+//   credentialTypes?: string[];
+//   issuers?: IssuerInfoMap;
+// }
+
+// /**
+//  * Type to encapsulate the response that the UnumID SaaS is expecting after forwarding the encrypted presentation to the verifier app for verification
+//  */
+// export interface VerificationResponse {
+//   isVerified: boolean;
+//   type: 'VerifiablePresentation' | 'NoPresentation';
+//   presentationReceiptInfo: PresentationReceiptInfo;
+//   presentationRequestUuid: string;
+//   presentation: Presentation;
+// }
