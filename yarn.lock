@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@unumid/types@git+ssh://git@github.com/UnumID/types.git#info":
+"@unumid/types@git+ssh://git@github.com/UnumID/types.git#v1.2.1":
   version "0.0.1"
-  resolved "git+ssh://git@github.com/UnumID/types.git#7a202845b8437a3080766d824892ee28e08fec64"
+  resolved "git+ssh://git@github.com/UnumID/types.git#b8d350a9e97b7e9e23b70eaea62a136fecd3c136"
   dependencies:
     runtypes "^6.0.0"
 
