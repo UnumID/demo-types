@@ -3,7 +3,8 @@ import {
   PresentationReceiptInfo,
   NoPresentation,
   Presentation,
-  PresentationRequestPostDto
+  PresentationRequestPostDto,
+  PushToken
 } from '@unumid/types';
 
 // base type which encapsulates properties shared by all database entities
@@ -44,11 +45,6 @@ export type DemoPresentationDto = WithVerification<DemoDto<Presentation, 'presen
 // type of the object published by verifier servers when a shared NoPresentation is received + verified
 export type DemoNoPresentationDto = WithVerification<DemoDto<NoPresentation, 'noPresentation'>>;
 
-// type of the FcmRegistrationToken object returned with DemoUsers
-export interface DemoFcmRegistrationToken extends DemoBaseEntity {
-  token: string;
-}
-
 // type of the object expected by the issuer server to create a User
 export interface DemoUserCreateOptions {
   email: string;
@@ -59,7 +55,7 @@ export interface DemoUserCreateOptions {
 // serialization of the User type used by issuer server
 type DemoUser = Omit<DemoUserCreateOptions, 'password'> & DemoBaseEntity & {
   did?: string;
-  fcmRegistrationTokens: DemoFcmRegistrationToken[];
+  pushTokens: PushToken[];
 };
 
 /**
