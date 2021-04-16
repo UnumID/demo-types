@@ -70,5 +70,4 @@ export interface VerificationResponse {
   type: 'VerifiablePresentation' | 'NoPresentation';
   presentationReceiptInfo: PresentationReceiptInfo;
   presentationRequestUuid: string;
-  presentation: Presentation;
 }
