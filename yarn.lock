@@ -4,7 +4,7 @@
 
 "@unumid/types@git+ssh://git@github.com/UnumID/types.git#push-token":
   version "1.4.1"
-  resolved "git+ssh://git@github.com/UnumID/types.git#55853e9b01d603e1c31cbb53f2170e94441cefa1"
+  resolved "git+ssh://git@github.com/UnumID/types.git#b37414fc641db3890d83dde726220f07653f5117"
   dependencies:
     runtypes "^6.0.0"
 
