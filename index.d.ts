@@ -1,10 +1,11 @@
 import {
   CredentialRequest,
   PresentationReceiptInfo,
-  NoPresentation,
+  NoPresentationDeprecated,
+  PresentationDeprecated,
   Presentation,
   PresentationRequestPostDto,
-  PushToken
+  PushToken,
 } from '@unumid/types';
 
 // base type which encapsulates properties shared by all database entities
@@ -42,8 +43,13 @@ export type DemoPresentationRequestDto = DemoDto<PresentationRequestPostDto, 'pr
 // type of the object published by verifier servers when a shared Presentation is received + verified
 export type DemoPresentationDto = WithVerification<DemoDto<Presentation, 'presentation'>>;
 
+// type of the object published by verifier servers when a shared Presentation is received + verified
+// DEPRECATED
+export type DemoPresentationDtoDeprecated = WithVerification<DemoDto<PresentationDeprecated, 'presentation'>>;
+
 // type of the object published by verifier servers when a shared NoPresentation is received + verified
-export type DemoNoPresentationDto = WithVerification<DemoDto<NoPresentation, 'noPresentation'>>;
+// DEPRECATED
+export type DemoNoPresentationDto = WithVerification<DemoDto<NoPresentationDeprecated, 'noPresentation'>>;
 
 // type of the object expected by the issuer server to create a User
 export interface DemoUserCreateOptions {
@@ -63,7 +69,7 @@ type DemoUser = Omit<DemoUserCreateOptions, 'password'> & DemoBaseEntity & {
  */
 export interface VerificationResponse {
   isVerified: boolean;
-  type: 'VerifiablePresentation' | 'NoPresentation';
+  type: 'VerifiablePresentation' | 'NoPresentation'; // TODO come back to: I think this makes sense to leave as is because as an easier way to determine if it was declined or not?
   presentationReceiptInfo: PresentationReceiptInfo;
   presentationRequestUuid: string;
 }
