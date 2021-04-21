@@ -2,13 +2,19 @@
 # yarn lockfile v1
 
 
+"@unumid/types-deprecated@git+ssh://git@github.com/UnumID/types.git#1.5.0":
+  version "1.5.0"
+  resolved "git+ssh://git@github.com/UnumID/types.git#ed25da7c28fa6a3de2e242442e9d512e1b0875d2"
+  dependencies:
+    runtypes "^6.0.0"
+
 "@unumid/types@git+ssh://git@github.com/UnumID/types.git#pres":
   version "1.5.1"
-  resolved "git+ssh://git@github.com/UnumID/types.git#ba2d9fcffd4bcac39f98bb714880f57ef84a54a9"
+  resolved "git+ssh://git@github.com/UnumID/types.git#461c7fb3fcdb9ca9c79bc41b14736a279619b955"
   dependencies:
     runtypes "^6.0.0"
 
 runtypes@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/runtypes/-/runtypes-6.0.0.tgz#0010e7e050a41d4ab38b6138051dfb8774a53f07"
-  integrity sha512-hVBZ2S0i9MmyViSpwCU7TGFuEZxjPIeTMbhCpz59/8C3IGbPL6N03bIVALGfVWZQ+MTXORjWpWnZUP3hPyw96w==
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/runtypes/-/runtypes-6.2.1.tgz#d6767b3ad35dcc5ba1ef7ff0ff76cbabab3a93b5"
+  integrity sha512-ZzOBGSPYT7qas93oNfHyoVG6eZyuLJ1husI+892RB/gsHwd+Rc4u61/5XCunNMDjKb0jl3LB/2wq12UCuaWoxQ==
