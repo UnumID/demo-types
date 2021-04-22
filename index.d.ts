@@ -6,11 +6,6 @@ import {
   PushToken,
 } from '@unumid/types';
 
-// import {
-//   NoPresentation as NoPresentationDeprecated,
-//   Presentation as PresentationDeprecated,
-// } from '@unumid/types-deprecated'
-
 // base type which encapsulates properties shared by all database entities
 // in the demos
 interface DemoBaseEntity {
@@ -45,14 +40,6 @@ export type DemoPresentationRequestDto = DemoDto<PresentationRequestPostDto, 'pr
 
 // type of the object published by verifier servers when a shared Presentation is received + verified
 export type DemoPresentationDto = WithVerification<DemoDto<Presentation, 'presentation'>>;
-
-// // type of the object published by verifier servers when a shared Presentation is received + verified
-// // DEPRECATED
-// export type DemoPresentationDtoDeprecated = WithVerification<DemoDto<PresentationDeprecated, 'presentation'>>;
-
-// // type of the object published by verifier servers when a shared NoPresentation is received + verified
-// // DEPRECATED
-// export type DemoNoPresentationDtoDeprecated = WithVerification<DemoDto<NoPresentationDeprecated, 'noPresentation'>>;
 
 // type of the object expected by the issuer server to create a User
 export interface DemoUserCreateOptions {
