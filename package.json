@@ -7,6 +7,6 @@
   "private": true,
   "dependencies": {
     "@unumid/types": "git+ssh://git@github.com/UnumID/types.git#pres",
-    "@unumid/types-deprecated": "git+ssh://git@github.com/UnumID/types.git#1.5.0"
+    "@unumid/types-deprecated": "git+ssh://git@github.com/UnumID/types.git#1.5.1"
   }
 }
