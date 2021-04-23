@@ -1,5 +1,5 @@
 {
-  "name": "@unumid@demo-typesv2",
+  "name": "@unumid/demo-types-new",
   "version": "0.0.1",
   "description": "collection of TypeScript types shared by the ACME family of demos",
   "main": "index.js",
