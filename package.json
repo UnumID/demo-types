@@ -1,11 +1,11 @@
 {
-  "name": "@unumid/demo-types-new",
+  "name": "@unumid/demo-types",
   "version": "0.0.1",
   "description": "collection of TypeScript types shared by the ACME family of demos",
   "main": "index.js",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@unumid/types": "git+ssh://git@github.com/UnumID/types.git#2.0.0-alpha2"
+    "@unumid/types": "git+ssh://git@github.com/UnumID/types.git#2.0.0-beta"
   }
 }
