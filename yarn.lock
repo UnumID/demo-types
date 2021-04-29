@@ -4,7 +4,7 @@
 
 "@unumid/types@git+ssh://git@github.com/UnumID/types.git#2.0.0-beta":
   version "1.5.1"
-  resolved "git+ssh://git@github.com/UnumID/types.git#0a8341a2c9179b65492cf2761d442671a58dc3be"
+  resolved "git+ssh://git@github.com/UnumID/types.git#1316736e17abeebf437072542338dcab2f7aeb2b"
   dependencies:
     runtypes "^6.0.0"
     semver "^7.3.5"
@@ -17,9 +17,9 @@ lru-cache@^6.0.0:
     yallist "^4.0.0"
 
 runtypes@^6.0.0:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/runtypes/-/runtypes-6.2.1.tgz#d6767b3ad35dcc5ba1ef7ff0ff76cbabab3a93b5"
-  integrity sha512-ZzOBGSPYT7qas93oNfHyoVG6eZyuLJ1husI+892RB/gsHwd+Rc4u61/5XCunNMDjKb0jl3LB/2wq12UCuaWoxQ==
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/runtypes/-/runtypes-6.3.0.tgz#bd88392c21f471bd45591d5eabaa4644ca7cdf3c"
+  integrity sha512-FTNUs13CIrCTjReBOaeY/8EY1LYIQVkkwyE9z5MCjZe9uew9/8TRbWF1PcTczgTFfGBjkjUKeedFWU2O3ExjPg==
 
 semver@^7.3.5:
   version "7.3.5"
