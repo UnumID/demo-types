@@ -1,10 +1,8 @@
 import {
   CredentialRequest,
-  PresentationReceiptInfo,
-  NoPresentation,
   Presentation,
   PresentationRequestPostDto,
-  PushToken
+  PushToken,
 } from '@unumid/types';
 
 // base type which encapsulates properties shared by all database entities
@@ -25,6 +23,9 @@ export type DemoDto<T, N extends string> = WithKeyAndValue<DemoBaseEntity, N, T>
 // helper type which adds a boolean 'isVerified' property to an existing type
 export type WithVerification<T> = WithKeyAndValue<T, 'isVerified', boolean>;
 
+// helper type which adds a version string
+export type WithVersion<T> = WithKeyAndValue<T, 'version', string>;
+
 // type of the Session entity used by demo verifiers
 // really just an alias for DemoBaseEntity, as Session entities
 // don't have any other meaningful properties
@@ -42,9 +43,6 @@ export type DemoPresentationRequestDto = DemoDto<PresentationRequestPostDto, 'pr
 // type of the object published by verifier servers when a shared Presentation is received + verified
 export type DemoPresentationDto = WithVerification<DemoDto<Presentation, 'presentation'>>;
 
-// type of the object published by verifier servers when a shared NoPresentation is received + verified
-export type DemoNoPresentationDto = WithVerification<DemoDto<NoPresentation, 'noPresentation'>>;
-
 // type of the object expected by the issuer server to create a User
 export interface DemoUserCreateOptions {
   email: string;
@@ -57,13 +55,3 @@ type DemoUser = Omit<DemoUserCreateOptions, 'password'> & DemoBaseEntity & {
   did?: string;
   pushTokens: PushToken[];
 };
-
-/**
- * Type to encapsulate the response that the UnumID SaaS is expecting after forwarding the encrypted presentation to the verifier app for verification
- */
-export interface VerificationResponse {
-  isVerified: boolean;
-  type: 'VerifiablePresentation' | 'NoPresentation';
-  presentationReceiptInfo: PresentationReceiptInfo;
-  presentationRequestUuid: string;
-}
