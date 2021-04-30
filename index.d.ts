@@ -1,6 +1,5 @@
 import {
   CredentialRequest,
-  PresentationReceiptInfo,
   Presentation,
   PresentationRequestPostDto,
   PushToken,
