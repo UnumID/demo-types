@@ -3,6 +3,7 @@ import {
   Presentation,
   PresentationRequestPostDto,
   PushToken,
+  WithKeyAndValue
 } from '@unumid/types';
 
 // base type which encapsulates properties shared by all database entities
@@ -13,18 +14,12 @@ interface DemoBaseEntity {
   updatedAt: Date;
 }
 
-// helper which adds a named key with a specific value type to an existing type
-type WithKeyAndValue<T, K extends string, V> = T & Record<K, V>;
-
 // base type which encapsulates properties shared by many objects returned
 // from the demo issuer and verifier apis
 export type DemoDto<T, N extends string> = WithKeyAndValue<DemoBaseEntity, N, T>;
 
 // helper type which adds a boolean 'isVerified' property to an existing type
 export type WithVerification<T> = WithKeyAndValue<T, 'isVerified', boolean>;
-
-// helper type which adds a version string
-export type WithVersion<T> = WithKeyAndValue<T, 'version', string>;
 
 // type of the Session entity used by demo verifiers
 // really just an alias for DemoBaseEntity, as Session entities
