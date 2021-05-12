@@ -41,6 +41,7 @@ export type DemoPresentationDto = WithVerification<DemoDto<Presentation, 'presen
 // type of the object expected by the issuer server to create a User
 export interface DemoUserCreateOptions {
   email: string;
+  firstName?: string;
   password: string;
   phone?: string;
 }
