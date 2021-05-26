@@ -67,7 +67,7 @@
 
 "@unumid/types@git+ssh://git@github.com/UnumID/types.git#proto4":
   version "2.1.0"
-  resolved "git+ssh://git@github.com/UnumID/types.git#f5aac32cf3a44cb52cc64efcd9d75ac4ba372624"
+  resolved "git+ssh://git@github.com/UnumID/types.git#73e52e7de544c9f2898e91ac8424e86cabe64fce"
   dependencies:
     google-protobuf "^3.17.0-rc.2"
     protobufjs "^6.11.2"
