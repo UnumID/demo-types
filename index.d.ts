@@ -29,7 +29,7 @@ export type DemoSession = DemoBaseEntity;
 // type of the object expected by verifier servers to create a PresentationRequest
 export interface DemoPresentationRequestCreateOptions {
   credentialRequests: CredentialRequest[];
-  metadata: { sessionUuid: string };
+  metadata: { fields: { sessionUuid: string } };
 }
 
 // type of the object returned by verifier servers when a PresentationRequest is created or gotten
