@@ -2,9 +2,10 @@
 # yarn lockfile v1
 
 
-"@unumid/types@git+ssh://git@github.com/UnumID/types.git#presV2":
-  version "2.1.2"
-  resolved "git+ssh://git@github.com/UnumID/types.git#09a0489ad59de3866c9ea1c81638bcce00897a4b"
+"@unumid/types@^2.1.3":
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/@unumid/types/-/types-2.1.3.tgz#3882eb0f18c2daf0658f94a3685e9504377a1051"
+  integrity sha512-YYKu5pjDMpI3NP51q97YpnGFnAdDcInLQcoNK7nG48fHLoPAzKea9r3iB54CjWOTardCgNpKpXYmh6bhfulSAw==
   dependencies:
     runtypes "^6.0.0"
     semver "^7.3.5"
