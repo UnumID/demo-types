@@ -65,9 +65,9 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-15.0.3.tgz#ee09fcaac513576474c327da5818d421b98db88a"
   integrity sha512-/WbxFeBU+0F79z9RdEOXH4CsDga+ibi5M8uEYr91u3CkT/pdWcV8MCook+4wDPnZBexRdwWS+PiVZ2xJviAzcQ==
 
-"@unumid/types@git+ssh://git@github.com/UnumID/types.git#pres":
-  version "3.0.2"
-  resolved "git+ssh://git@github.com/UnumID/types.git#7ef02e0029bdfcc86d36e71ccc800535d6c73dc0"
+"@unumid/types@git+ssh://git@github.com/UnumID/types.git#3.0.3":
+  version "3.0.3"
+  resolved "git+ssh://git@github.com/UnumID/types.git#324fd1dd4d951e12581b4cacc3620085409b6bc2"
   dependencies:
     google-protobuf "^3.17.0-rc.2"
     protobufjs "^6.11.2"
