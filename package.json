@@ -1,6 +1,6 @@
 {
   "name": "@unumid/demo-types",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "collection of TypeScript types shared by the ACME family of demos",
   "main": "index.js",
   "license": "MIT",
