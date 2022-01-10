@@ -26,10 +26,11 @@ export type WithVerification<T> = WithKeyAndValue<T, 'isVerified', boolean>;
 // don't have any other meaningful properties
 export type DemoSession = DemoBaseEntity;
 
-// type of the object expected by verifier servers to create a PresentationRequest
+// type of the object expected by verifier servers, sent by the clients to create a PresentationRequest
 export interface DemoPresentationRequestCreateOptions {
   credentialRequests: CredentialRequest[];
   metadata: { fields: { sessionUuid: string } };
+  holderAppUuid?: string; // optional because often times can be a constant config variable on the server, however not always
 }
 
 // type of the object returned by verifier servers when a PresentationRequest is created or gotten
