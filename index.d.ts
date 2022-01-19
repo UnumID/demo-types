@@ -51,4 +51,5 @@ export interface DemoUserCreateOptions {
 type DemoUser = Omit<DemoUserCreateOptions, 'password'> & DemoBaseEntity & {
   did?: string;
   pushTokens: PushToken[];
+  userCode?: string;
 };
