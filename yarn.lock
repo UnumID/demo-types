@@ -67,6 +67,7 @@
 
 "@unumid/types@git+ssh://git@github.com/UnumID/types.git#3.12.0":
   version "3.12.0"
+  uid "0dd53b6feb1ed78a8ee0186bf40bd1081ada702e"
   resolved "git+ssh://git@github.com/UnumID/types.git#0dd53b6feb1ed78a8ee0186bf40bd1081ada702e"
   dependencies:
     google-protobuf "^3.17.0-rc.2"
@@ -92,9 +93,9 @@ lru-cache@^6.0.0:
     yallist "^4.0.0"
 
 protobufjs@^6.11.2:
-  version "6.11.2"
-  resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-6.11.2.tgz#de39fabd4ed32beaa08e9bb1e30d08544c1edf8b"
-  integrity sha512-4BQJoPooKJl2G9j3XftkIXjoC9C0Av2NOrWmbLWT1vH32GcSUHjM0Arra6UfTsVyfMAuFzaLucXn1sadxJydAw==
+  version "6.11.4"
+  resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-6.11.4.tgz#29a412c38bf70d89e537b6d02d904a6f448173aa"
+  integrity sha512-5kQWPaJHi1WoCpjTGszzQ32PG2F4+wRY6BmAT4Vfw56Q2FZ4YZzK20xUYQH4YkfehY1e6QSICrJquM6xXZNcrw==
   dependencies:
     "@protobufjs/aspromise" "^1.1.2"
     "@protobufjs/base64" "^1.1.2"
